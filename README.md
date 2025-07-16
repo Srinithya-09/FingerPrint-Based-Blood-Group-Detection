@@ -1,53 +1,90 @@
 # FingerPrint-Based-Blood-Group-Detection
 
-FRACTOSCAN is a deep learning-based system designed to automatically detect bone fractures from X-ray images. The project utilizes Convolutional Neural Networks (CNN) for image classification and includes preprocessing techniques to enhance image quality and model accuracy.
+This project implements a deep learning-based system to predict an individual's blood group from fingerprint images. The system uses CNN and RNN architectures to analyze ridge patterns and temporal features for accurate classification.
 
-## 🧠 Project Objective
+---
 
-To build an automated tool that can classify X-ray images into **fractured** or **non-fractured** categories by analyzing bone structures using CNN-based image analysis.
+## 🎯 Objective
 
-## 📂 Project Structure
+To develop an intelligent system that can classify blood groups (A, B, AB, O) by analyzing fingerprint patterns, aiding in quick and non-invasive medical identification.
 
-FRACTOSCAN/
+---
+
+## 🧠 Key Features
+
+- **CNN** for spatial feature extraction from fingerprint ridges
+- **RNN** for modeling temporal ridge flow dependencies
+- Image preprocessing for ridge enhancement and noise removal
+- Blood group classification into categories: A, B, AB, O (+/-)
+- Real-time prediction and accuracy optimization
+
+---
+
+## 🗂️ Project Structure
+
+Fingerprint-BloodGroup-Detection/
 │
 ├── dataset/
-│ ├── train/
-│ │ ├── fractured/
-│ │ └── non_fractured/
-│ └── test/
-│ ├── fractured/
-│ └── non_fractured/
+│ ├── A/
+│ ├── B/
+│ ├── AB/
+│ └── O/
 │
 ├── models/
-│ └── trained_model.h5
+│ └── fingerprint_blood_model.h5
 │
-├── notebooks/
-│ └── fracture_detection.ipynb
-│
-├── utils/
-│ └── preprocessing.py
+├── preprocessing/
+│ └── enhance_fingerprint.py
 │
 ├── main.py
+├── utils.py
 ├── requirements.txt
 └── README.md
+## 🔧 How to Run
 
-## 🔍 Key Features
-
-- Preprocessing using **histogram equalization**, **Gaussian blur**, and **binary thresholding**
-- Bone region enhancement using **OpenCV**
-- Feature extraction using **CNN (Convolutional Neural Networks)**
-- Transfer learning using **ResNet-50**
-- Visual explainability using **Grad-CAM**
-- Evaluation metrics: Accuracy, Precision, Recall, F1-Score
-
-## 🚀 How to Run
-
-1. **Clone the repository**  
-   git clone https://github.com/your-username/fractoscan.git
-   cd fractoscan
+1. **Clone the Repository*
+   git clone https://github.com/your-username/fingerprint-bloodgroup.git
+   cd fingerprint-bloodgroup
    
-2. **Install dependencies**
+3. **Install Dependencies**
 pip install -r requirements.txt
 
-3. **Run the main script**
+4. **Run the Main Script**
 python main.py
+
+**📈 Technologies Used Python**
+
+TensorFlow / Keras
+
+OpenCV
+
+CNN (Convolutional Neural Networks)
+
+RNN (Recurrent Neural Networks)
+
+NumPy, Pandas, Matplotlib
+
+**📊 Results (Example)**
+Metric	Value
+Accuracy	88.6%
+Precision	87.2%
+Recall	89.5%
+F1-Score	88.3%
+
+
+**🧪 Sample Workflow**
+Input: Fingerprint image
+
+Preprocessing: Enhance ridges, remove noise
+
+Feature Extraction: CNN + RNN
+
+Output: Predicted Blood Group (e.g., B+)
+
+
+👩‍💻 Author
+Saindla Srinithya – Final Year CSE (AIML)
+Email: [srinithyasridhar@gmail.com]
+
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
